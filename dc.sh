@@ -15,10 +15,11 @@ SEDSTR="$SEDSTR;"'s/<inm:Reference-Number>/<dc:identifier>/g'
 SEDSTR="$SEDSTR;"'s/<\/inm:Reference-Number>/<\/dc:identifier>/g'
 SEDSTR="$SEDSTR;"'s/<inm:Language>/<dc:language>/g'
 SEDSTR="$SEDSTR;"'s/<\/inm:Language>/<\/dc:language>/g'
+SEDSTR="$SEDSTR;"'s/<\/inm:Title>/<\/dc:title>/g'
 #this deletes lines that start with in magic but doesn't work for long strings as they move to a new line. Perhaps something like ALL LINES NOT STARTING WITH DC"
 #sed -i '' '/^<inm/d' "$1"
 #sed -i '' '/^<\/inm/d' "$1"
 
 
 sed -i -e "$SEDSTR" "$1"
-sed -i '' '/^<inm/d' "$1"
+sed -i '' '/^<dc/!d' "$1"
