@@ -3,7 +3,7 @@
 echo "DB/Textworks to Dublin Core Convertor. V1.0 By Kieran O'Leary. "
 
 
-# messy code 
+# original messy code 
 	#sed -i -e 's/<inm:Title>/<dc:title>/g;s/<inm:Date>/<dc:date>/g;s/<inm:Subject-Headings>/<dc:subject>/g;s/<\/inm:Date>/<\/dc:date>/g;s/<\/inm:Subject-Headings>/<\/dc:subject>/g;s/<inm:Reference-Number>/<dc:identifier>/g;s/<\/inm:Reference-Number>/<\/dc:identifier>/g;s/<inm:Language>/<dc:language>/g;s/<\/inm:Language>/<\/dc:language>/g' "$1"
 
 SEDSTR='s/<inm:Title>/<dc:title>/g'
